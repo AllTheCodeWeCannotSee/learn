@@ -6,6 +6,7 @@ import QAIndexView from "@/views/qa/QAIndexView";
 import TrainIndexView from "@/views/train/TrainIndexView";
 import UserAccountLoginView from "@/views/user/account/UserAccountLoginView";
 import UserAccountRegisterView from "@/views/user/account/UserAccountRegisterView";
+import store from "@/store";
 
 
 const routes = [
@@ -13,41 +14,65 @@ const routes = [
         path: "/",
         name: "home",
         redirect: "/learn/",
+        meta: {
+            requestAuth: false,
+        }
     },
     {
         path: "/learn/",
         name: "learn_index",
-        component: LearnIndexView
+        component: LearnIndexView,
+        meta: {
+            requestAuth: false,
+        }
     },
     {
         path: "/documentation/",
         name: "documentation_index",
-        component: DocumentationIndexView
+        component: DocumentationIndexView,
+        meta: {
+            requestAuth: true,
+        }
     },
     {
         path: "/404/",
         name: "404_index",
-        component: NotFound
+        component: NotFound,
+        meta: {
+            requestAuth: false,
+        }
     },
     {
         path: "/qa/",
         name: "qa_index",
-        component: QAIndexView
+        component: QAIndexView,
+        meta: {
+            requestAuth: true,
+        }
     },
     {
         path: "/train/",
         name: "train_index",
-        component: TrainIndexView
+        component: TrainIndexView,
+        meta: {
+            requestAuth: false,
+        }
     },
     {
         path: "/user/account/login/",
         name: "user_account_login",
-        component: UserAccountLoginView
+        component: UserAccountLoginView,
+        meta: {
+            requestAuth: false,
+        }
     },
     {
         path: "/user/account/register/",
         name: "user_account_register",
-        component: UserAccountRegisterView
+        component: UserAccountRegisterView,
+        meta: {
+            requestAuth: false,
+        }
     }
 
 
@@ -56,6 +81,14 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes
+})
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.requestAuth && !store.state.user.is_login) {
+        next({name: "user_account_login"});
+    } else {
+        next();
+    }
 })
 
 export default router

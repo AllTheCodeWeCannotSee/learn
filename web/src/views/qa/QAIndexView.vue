@@ -1,10 +1,13 @@
 <template>
-Q & A
+  <ContentField>Q&A</ContentField>
 </template>
 
 <script>
+import ContentField from '../../components/ContentField'
 export default {
-  name: "QAIndexView"
+  components: {
+    ContentField
+  }
 }
 </script>
 

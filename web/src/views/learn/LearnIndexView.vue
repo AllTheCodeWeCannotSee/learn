@@ -1,10 +1,13 @@
 <template>
-学习
+  <ContentField>学习</ContentField>
 </template>
 
 <script>
+import ContentField from '../../components/ContentField'
 export default {
-  name: "LearnIndexView"
+  components: {
+    ContentField
+  }
 }
 </script>
 

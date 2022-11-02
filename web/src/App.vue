@@ -16,20 +16,24 @@ import "bootstrap/dist/js/bootstrap"
 export default {
   name: "App",
 
-  // setup: () => {
-  //   let smile = ref("");
-  //
-  //   $.ajax({
-  //     url: "http://127.0.0.1:3000/pk/getinfo/",
-  //     type: "get",
-  //     success: resp => {
-  //       smile.value = resp;
-  //     }
-  //   });
-  //   return {
-  //     smile
-  //   }
-  // },
+  setup: () => {
+    // $.ajax({
+    //   url: "http://127.0.0.1:3000/user/account/register/",
+    //   type: "post",
+    //   data: {
+    //     username: 'Cup',
+    //     password: 'pcup',
+    //     confirmedPassword: 'pcup',
+    //   },
+    //   success(resp) {
+    //     console.log(resp);
+    //   },
+    //   error(resp) {
+    //     console.log(resp);
+    //   }
+    // })
+  },
+
   components: {
     NavBar
   },
