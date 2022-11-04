@@ -1,13 +1,16 @@
 <template>
-  <NavBar />
-
+  <!--  <NavBar />-->
+  <TestNavBar />
   <router-view></router-view>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+// import NavBar from "@/components/NavBar";
+import TestNavBar from "@/components/TestNavBar"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap"
+
 
 // import $ from 'jquery'
 // import { ref } from 'vue'
@@ -35,7 +38,8 @@ export default {
   },
 
   components: {
-    NavBar
+    // NavBar,
+    TestNavBar
   },
 }
 </script>

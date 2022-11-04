@@ -15,7 +15,7 @@ const routes = [
         name: "home",
         redirect: "/learn/",
         meta: {
-            requestAuth: false,
+            requestAuth: true,
         }
     },
     {
@@ -23,7 +23,7 @@ const routes = [
         name: "learn_index",
         component: LearnIndexView,
         meta: {
-            requestAuth: false,
+            requestAuth: true,
         }
     },
     {
@@ -55,7 +55,7 @@ const routes = [
         name: "train_index",
         component: TrainIndexView,
         meta: {
-            requestAuth: false,
+            requestAuth: true,
         }
     },
     {
