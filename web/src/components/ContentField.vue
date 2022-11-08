@@ -15,5 +15,6 @@
 <style scoped>
 div.content-field{
   margin-top: 20px;
+  background-color: #e8e6df;
 }
 </style>

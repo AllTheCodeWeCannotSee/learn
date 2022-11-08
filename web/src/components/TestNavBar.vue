@@ -11,52 +11,58 @@
       <ul class="nav-bar-nav-list">
         <li class="nav-bar-item is-category">
           <a class="nav-bar-button is-title" itemprop="url">
-            <router-link :class="route_name == 'learn_index' ? `nav-link active` : 'nav-link'" :to="{name: 'learn_index'}">Learn</router-link>
+            <router-link :class="route_name == 'learn_index' ? `nav-link active` : 'nav-link'" :to="{name: 'learn_index'}">
+              Learn
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-            <router-link :class="route_name == 'documentation_index' ? `nav-link active` : 'nav-link'" :to="{name: 'documentation_index'}">文档</router-link>
+            <router-link :class="route_name == 'documentation_index' ? `nav-link active` : 'nav-link'" :to="{name: 'documentation_index'}">
+              文档
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-            <router-link :class="route_name == 'train_index' ? `nav-link active` : 'nav-link'" :to="{name: 'train_index'}">培训</router-link>
+            <router-link :class="route_name == 'training_index' ? `nav-link active` : 'nav-link'" :to="{name: 'training_index'}">
+              培训
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-              <span>
-                认证
-              </span>
+            <router-link :class="route_name == 'certifications_index' ? `nav-link active` : 'nav-link'" :to="{name: 'certifications_index'}">
+              认证
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-              <span>
-                Q&A
-              </span>
+            <router-link :class="route_name == 'qa_index' ? `nav-link active` : 'nav-link'" :to="{name: 'qa_index'}">
+              Q&A
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-              <span>
-                代码示例
-              </span>
+            <router-link :class="route_name == 'samples_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'samples_index'}">
+              代码示例
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-              <span>
-                节目
-              </span>
+            <router-link :class="route_name == 'shows'? 'nav-link active' : 'nav-link'" :to="{name: 'shows_index'}">
+              节目
+            </router-link>
           </a>
         </li>
         <li class="nav-bar-item">
           <a class="nav-bar-button">
-              <span>
-                事件
-              </span>
+            <router-link :class="router_name == 'events' ? 'nav-link active' : 'nav-link'" :to="{name: 'events_index'}">
+              事件
+            </router-link>
           </a>
         </li>
       </ul>

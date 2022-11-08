@@ -1,5 +1,5 @@
 <template>
-  <!--  <NavBar />-->
+<!--    <NavBar />-->
   <TestNavBar />
   <router-view></router-view>
 </template>
@@ -36,7 +36,6 @@ export default {
     //   }
     // })
   },
-
   components: {
     // NavBar,
     TestNavBar

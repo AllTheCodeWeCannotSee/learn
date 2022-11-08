@@ -3,10 +3,14 @@ import DocumentationIndexView from "@/views/documentation/DocumentationIndexView
 import LearnIndexView from "@/views/learn/LearnIndexView";
 import NotFound from "@/views/error/NotFound";
 import QAIndexView from "@/views/qa/QAIndexView";
-import TrainIndexView from "@/views/train/TrainIndexView";
+import TrainingIndexView from "@/views/training/TrainingIndexView";
 import UserAccountLoginView from "@/views/user/account/UserAccountLoginView";
 import UserAccountRegisterView from "@/views/user/account/UserAccountRegisterView";
 import store from "@/store";
+import CertificationsIndexView from "@/views/certifications/CertificationsIndexView";
+import SamplesIndexView from "@/views/samples/SamplesIndexView";
+import ShowsIndexView from "@/views/shows/ShowsIndexView";
+import EventsIndexView from "@/views/events/EventsIndexView";
 
 
 const routes = [
@@ -51,9 +55,41 @@ const routes = [
         }
     },
     {
-        path: "/train/",
-        name: "train_index",
-        component: TrainIndexView,
+        path: "/training/",
+        name: "training_index",
+        component: TrainingIndexView,
+        meta: {
+            requestAuth: true,
+        }
+    },
+    {
+        path: "/certifications/",
+        name: "certifications_index",
+        component: CertificationsIndexView,
+        meta: {
+            requestAuth: true,
+        }
+    },
+    {
+        path: "/samples/",
+        name: "samples_index",
+        component: SamplesIndexView,
+        meta: {
+            requestAuth: true,
+        }
+    },
+    {
+        path: "/shows/",
+        name: "shows_index",
+        component: ShowsIndexView,
+        meta: {
+            requestAuth: true,
+        }
+    },
+    {
+        path: "/events/",
+        name: "events_index",
+        component: EventsIndexView,
         meta: {
             requestAuth: true,
         }
